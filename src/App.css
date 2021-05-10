@@ -80,6 +80,8 @@ body {
   align-items: center;
   font-weight: 600;
   font-size: 1.5rem;
+  margin: auto;
+  max-width: 700px;
 }
 
 .scramble-warning {
@@ -110,7 +112,7 @@ body {
 .tournament-wrap,
 .leaderboard-wrap {
   margin: auto;
-  padding: 2px;
+  padding: 1px;
   max-width: 700px;
 }
 
@@ -134,13 +136,21 @@ body {
   font-size: 1.3rem;
 }
 
+thead,
+tbody {
+  margin: auto;
+  max-width: 700px;
+}
+
 td,
 th {
   padding: 5px 2px 5px 2px;
   text-align: left;
-  border-width: 0 1px 1px 0;
+  /*  border-width: 0 1px 1px 0;*/
+  border-width: 0;
   border-color: rgba(0, 0, 0, 0.15);
   border-style: solid;
+  margin: auto;
 }
 
 th {

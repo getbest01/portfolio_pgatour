@@ -67,19 +67,20 @@ function Leaderboard(props) {
           {props.lbData.Tournament.City} ,{props.lbData.Tournament.State}
         </span>
       </div>
-
-      <thead>
-        <th>POS</th>
-        <th>COUNTRY</th>
-        <th>PLAYER</th>
-        <th>TOT</th>
-        <th>R1</th>
-        <th>R2</th>
-        <th>R3</th>
-        <th>R4</th>
-        <th>STROKES</th>
-      </thead>
-      <tbody>{leaderboard}</tbody>
+      <table>
+        <thead>
+          <th>POS</th>
+          <th>COUNTRY</th>
+          <th>PLAYER</th>
+          <th>TOT</th>
+          <th>R1</th>
+          <th>R2</th>
+          <th>R3</th>
+          <th>R4</th>
+          <th>STROKES</th>
+        </thead>
+        <tbody>{leaderboard}</tbody>
+      </table>
     </div>
   );
 }

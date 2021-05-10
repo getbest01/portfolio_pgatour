@@ -52,7 +52,7 @@ function Tournaments(props) {
   ));
 
   return (
-    <div className="tournament-wrap">
+    <table className="tournament-wrap">
       <thead className="table-header">
         <th>DATE</th>
         <th>TOURNAMENT</th>
@@ -60,7 +60,7 @@ function Tournaments(props) {
         <th>LEADERBOARD</th>
       </thead>
       <tbody>{tournamentList}</tbody>
-    </div>
+    </table>
   );
 }
 
