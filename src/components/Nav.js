@@ -4,6 +4,11 @@ import Tournaments from "./Tournaments";
 import Leaderboard from "./Leaderboard";
 import News from "./News";
 
+/*
+- React router is used in Nav 
+- While fetching, navigation link is ignored
+ 
+*/
 function Nav(props) {
   return (
     <Router>

@@ -9,8 +9,6 @@ function App() {
   const [newsData, setnewsData] = useState("");
   const [fetching, setfetching] = useState("not-fetching");
 
-  // const [loading, setloading] = useState("");
-
   //fetch PGA tournament data
   useEffect(() => {
     setfetching("fetching");
@@ -27,7 +25,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        // setloading("");
         settourList(data);
         // take the most recent ended tourID for leaderboard initoal population when initnated
         settourId(
@@ -62,7 +59,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        // setloading("");
         setnewsData(data);
       })
 
@@ -77,6 +73,7 @@ function App() {
     }
   }, [tourId]);
 
+  //leaderboard fetch function based on tour id
   function loadLeaderboard(a) {
     setfetching("fetching");
     fetch(`https://jason-11.herokuapp.com/pga-leaderboard?tourId=${a}`, {
@@ -92,7 +89,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        // setloading("");
         setleaderboardData(data);
         setfetching("not-fetching");
       })
@@ -102,6 +98,7 @@ function App() {
       });
   }
 
+  //date conversion function for various usages throught the app
   function dateConv(dateStr, arg) {
     let tempDate = new Date(dateStr);
     let returnVal;
