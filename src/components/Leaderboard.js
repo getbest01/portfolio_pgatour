@@ -1,8 +1,9 @@
 function Leaderboard(props) {
+  console.log(props);
   const SCRAMBLEFACTOR = 1;
 
   const PARSTROKE = props.lbData.Tournament.Par * 4;
-  const leaderboard = props.lbData.Players.filter((a) => a.Rank).map(
+  const leaderboard = props.lbData.Players.filter((a) => a.Rank !== null).map(
     (data, index) => (
       <tr className={index % 2 === 0 ? "even" : "odd"}>
         <td>
