@@ -38,6 +38,7 @@ function App() {
                   .reduce((acc, value) => (acc > value ? acc : value))
             )
             .map((a) => a.TournamentID)
+            .reduce((acc, value) => (acc > value ? acc : value))
         );
       })
 
