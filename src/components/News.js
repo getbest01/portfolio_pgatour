@@ -1,6 +1,8 @@
+import { nanoid } from "nanoid";
+
 function News(props) {
   const newsList = props.newsData.map((data) => (
-    <article className="news-article">
+    <article key={nanoid()} className="news-article">
       <h1>{data.Title}</h1>
       <p>{data.Content}</p>
     </article>

@@ -3,11 +3,12 @@
 
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 function Tournaments(props) {
   const history = useHistory();
   const tournamentList = props.tourList.map((data, index) => (
-    <tr className={index % 2 === 0 ? "even" : "odd"}>
+    <tr key={nanoid()} className={index % 2 === 0 ? "even" : "odd"}>
       <td>
         <span>
           {`${props.dateConv(data.StartDate, "MMM")} ${props.dateConv(
@@ -54,10 +55,12 @@ function Tournaments(props) {
   return (
     <table className="tournament-wrap">
       <thead className="table-header">
-        <th>DATE</th>
-        <th>TOURNAMENT</th>
-        <th>FORMAT</th>
-        <th>LEADERBOARD</th>
+        <tr>
+          <th>DATE</th>
+          <th>TOURNAMENT</th>
+          <th>FORMAT</th>
+          <th>LEADERBOARD</th>
+        </tr>
       </thead>
       <tbody>{tournamentList}</tbody>
     </table>
